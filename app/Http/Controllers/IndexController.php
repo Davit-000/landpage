@@ -46,7 +46,6 @@ class IndexController extends Controller
         $portfolios = Portfolio::get(array('name', 'filter', 'images'));
         $services = Service::where('id', '<', 20)->get();
 
-<<<<<<< HEAD
         // Start Menu
         $menu = array();
         foreach($pages as $page) {
@@ -65,7 +64,6 @@ class IndexController extends Controller
             'pages' => $pages,
             'services' => $services,
         ));
-=======
         $menu = [];
 
         foreach ($pages as $page) {
@@ -87,6 +85,5 @@ class IndexController extends Controller
             'pages' => $pages,
             'services' => $services
         ]);
->>>>>>> d05de7b7030485ce932a9dc129eebd80c9cb192c
     }
 }

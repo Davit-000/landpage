@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Notes </title>
+    <title>Notes</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -44,8 +44,6 @@ Content start
 ==================== -->
     @yield('content')
 
-
-
 <!-- Js -->
 <script src="{{ URL::asset('js/vendor/modernizr-2.6.2.min.js') }}"></script>
 <script src="{{ URL::asset('js/vendor/jquery-1.10.2.min.js') }}"></script>
@@ -53,7 +51,7 @@ Content start
 <script src="{{ URL::asset('js/jquery.lwtCountdown-1.0.js') }}"></script>
 <script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
 <script src="{{ URL::asset('js/owl.carousel.min.js') }}"></script>
-{{--<script src="js/jquery.validate.min.js"></script>--}}
+<script src="{{ URL::asset('js/jquery.validate.min.js') }}"></script>
 <script src="{{ URL::asset('js/jquery.form.js') }}"></script>
 <script src="{{ URL::asset('js/jquery.nav.js') }}"></script>
 <script src="{{ URL::asset('js/jquery.sticky.js') }}"></script>
