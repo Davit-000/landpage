@@ -1,4 +1,12 @@
+
+
 <section id="about" class="section">
+    <div class="row">
+        <div class="col-md-5 col-md-offset-3">
+            {{link_to(route('home'), 'Back') }}
+
+        </div>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-md-7 col-sm-12 wow fadeInLeft">
@@ -29,5 +37,4 @@
             </div>
         </div>
     </div>
-    {{link_to('/')}}
-</section>
+</section
