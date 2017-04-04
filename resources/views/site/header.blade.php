@@ -1,7 +1,12 @@
+
 <div class="navbar-default navbar-fixed-top" id="navigation">
     <div class="container">
+<<<<<<< HEAD
         @if(isset($menu))
             <!-- Brand and toggle get grouped for better mobile display -->
+=======
+    @if(isset($menu))
+>>>>>>> d05de7b7030485ce932a9dc129eebd80c9cb192c
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
                     <span class="sr-only">Toggle navigation</span>
@@ -19,15 +24,25 @@
             <nav class="collapse navbar-collapse" id="navbar">
                 <ul class="nav navbar-nav navbar-right" id="top-nav">
                     @foreach($menu as $item)
+<<<<<<< HEAD
                     <li>
                         <a href="#{{ $item['alias'] }}">
                             {{ $item['title'] }}
                         </a>
                     </li>
+=======
+                        <li class="">
+                            <a href="#{{$item['alias']}}">{{$item['title']}}</a>
+                        </li>
+>>>>>>> d05de7b7030485ce932a9dc129eebd80c9cb192c
                     @endforeach
                 </ul>
             </nav><!-- /.navbar-collapse -->
         @endif
+<<<<<<< HEAD
+=======
+        <!-- Brand and toggle get grouped for better mobile display -->
+>>>>>>> d05de7b7030485ce932a9dc129eebd80c9cb192c
     </div><!-- /.container-fluid -->
 </div>
 @if(session('status'))
