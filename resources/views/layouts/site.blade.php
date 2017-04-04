@@ -15,14 +15,13 @@
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 
     <!-- CSS -->
-
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ URL::asset('css/font-awesome.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ URL::asset('css/owl.carousel.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ URL::asset('css/animate.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ URL::asset('css/main.css')}}" type="text/css">
     <!-- Responsive Stylesheet -->
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="{{ URL::asset('css/responsive.css') }}" type="text/css">
 </head>
 
 <body id="body">
@@ -48,19 +47,19 @@ Content start
 
 
 <!-- Js -->
-<script src="js/vendor/modernizr-2.6.2.min.js"></script>
-<script src="js/vendor/jquery-1.10.2.min.js"></script>
+<script src="{{ URL::asset('js/vendor/modernizr-2.6.2.min.js') }}"></script>
+<script src="{{ URL::asset('js/vendor/jquery-1.10.2.min.js') }}"></script>
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-<script src="js/jquery.lwtCountdown-1.0.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/jquery.validate.min.js"></script>
-<script src="js/jquery.form.js"></script>
-<script src="js/jquery.nav.js"></script>
-<script src="js/jquery.sticky.js"></script>
-<script src="js/plugins.js"></script>
-<script src="js/wow.min.js"></script>
-<script src="js/main.js"></script>
+<script src="{{ URL::asset('js/jquery.lwtCountdown-1.0.js') }}"></script>
+<script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
+<script src="{{ URL::asset('js/owl.carousel.min.js') }}"></script>
+{{--<script src="js/jquery.validate.min.js"></script>--}}
+<script src="{{ URL::asset('js/jquery.form.js') }}"></script>
+<script src="{{ URL::asset('js/jquery.nav.js') }}"></script>
+<script src="{{ URL::asset('js/jquery.sticky.js') }}"></script>
+<script src="{{ URL::asset('js/plugins.js') }}"></script>
+<script src="{{ URL::asset('js/wow.min.js') }}"></script>
+<script src="{{ URL::asset('js/main.js') }}"></script>
 
 </body>
 </html>

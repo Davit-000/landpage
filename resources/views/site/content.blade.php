@@ -1,162 +1,129 @@
-<section id="hero-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="block">
-                    <h1 class="wow fadeInDown">A passionate web company</h1>
-                    <p class="wow fadeInDown" data-wow-delay="0.3s">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
-                    <div class="wow fadeInDown" data-wow-delay="0.3s">
-                        <a class="btn btn-default btn-home" href="#about" role="button">Get Started</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 wow zoomIn">
-                <div class="block">
-                    <div class="counter text-center">
-                        <ul id="countdown_dashboard">
-                            <li>
-                                <div class="dash days_dash">
-                                    <div class="digit">0</div>
-                                    <div class="digit">0</div>
-                                    <div class="digit">0</div>
-                                    <span class="dash_title">Days</span>
+@if(isset($pages) && is_object($pages))
+    @foreach($pages as $k => $page)
+        @if($k % 2 == 0)
+            <section id="hero-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="block">
+                                {!! $page->text !!}
+                                <div class="wow fadeInDown" data-wow-delay="0.3s">
+                                    <a class="btn btn-default btn-home" href="{{ route('page', array('alias' => $page->alias)) }}" role="button">
+                                        Get Started
+                                    </a>
                                 </div>
-                            </li>
-                            <li>
-                                <div class="dash hours_dash">
-                                    <div class="digit">0</div>
-                                    <div class="digit">0</div>
-                                    <span class="dash_title">Hours</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="dash minutes_dash">
-                                    <div class="digit">0</div>
-                                    <div class="digit">0</div>
-                                    <span class="dash_title">Minutes</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="dash seconds_dash">
-                                    <div class="digit">0</div>
-                                    <div class="digit">0</div>
-                                    <span class="dash_title">Seconds</span>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div><!-- .row close -->
-    </div><!-- .container close -->
-</section><!-- header close -->
-
-
-
-<!--
-About start
-==================== -->
-<section id="about" class="section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-7 col-sm-12 wow fadeInLeft">
-                <div class="sub-heading">
-                    <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsa recusandae consequatur veniam, reiciendis odit quia eaque vel eius a.</h3>
-                </div>
-                <div class="block">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla-mco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in</p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, aspernatur.
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-5 col-sm-12 wow fadeInLeft" data-wow-delay="0.3s">
-                <div class="about-slider">
-                    <div class="init-slider">
-                        <div class="about-item">
-                            <img src="images/about/1.jpg" alt="" class="img-responsive">
+                            </div>
                         </div>
-                        <div class="about-item">
-                            <img src="images/about/2.jpg" alt="" class="img-responsive">
+                        <div class="col-md-6 wow zoomIn">
+                            <div class="block">
+                                <div class="counter text-center">
+                                    <ul id="countdown_dashboard">
+                                        <li>
+                                            <div class="dash days_dash">
+                                                <div class="digit">0</div>
+                                                <div class="digit">0</div>
+                                                <div class="digit">0</div>
+                                                <span class="dash_title">Days</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="dash hours_dash">
+                                                <div class="digit">0</div>
+                                                <div class="digit">0</div>
+                                                <span class="dash_title">Hours</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="dash minutes_dash">
+                                                <div class="digit">0</div>
+                                                <div class="digit">0</div>
+                                                <span class="dash_title">Minutes</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="dash seconds_dash">
+                                                <div class="digit">0</div>
+                                                <div class="digit">0</div>
+                                                <span class="dash_title">Seconds</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <div class="about-item">
-                            <img src="images/about/3.jpg" alt="" class="img-responsive">
+                    </div><!-- .row close -->
+                </div><!-- .container close -->
+            </section><!-- header close -->
+        @else
+            <!--
+            About start
+            ==================== -->
+            <section id="about" class="section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-7 col-sm-12 wow fadeInLeft">
+                            <div class="sub-heading">
+                                <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsa recusandae consequatur veniam, reiciendis odit quia eaque vel eius a.</h3>
+                            </div>
+                            <div class="block">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla-mco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in</p>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, aspernatur.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-sm-12 wow fadeInLeft" data-wow-delay="0.3s">
+                            <div class="about-slider">
+                                <div class="init-slider">
+                                    <div class="about-item">
+                                        <img src="images/about/1.jpg" alt="" class="img-responsive">
+                                    </div>
+                                    <div class="about-item">
+                                        <img src="images/about/2.jpg" alt="" class="img-responsive">
+                                    </div>
+                                    <div class="about-item">
+                                        <img src="images/about/3.jpg" alt="" class="img-responsive">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</section><!-- #about close -->
-<!--
-About start
-==================== -->
+            </section><!-- #about close -->
+        @endif
+    @endforeach
+@endif
 
-<!--
-Service start
-==================== -->
-<section id="service" class="section">
-    <div class="container">
-        <div class="row">
-            <div class="heading wow fadeInUp">
-                <h2>Our service</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et <br> dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex</p>
-            </div>
-            <div class="col-sm-6 col-md-3 wow fadeInLeft">
-                <div class="service">
-                    <div class="icon-box">
-                            	<span class="icon">
-                                    <i class="ion-android-desktop"></i>
-                                </span>
-                    </div>
-                    <div class="caption">
-                        <h3>Fully Responsive</h3>
-                        <p>Lorem ipsum dolor sit amet, con-sectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
-                    </div>
+@if(isset($services) && is_object($services))
+    <!--
+    Service start
+    ==================== -->
+    <section id="service" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="heading wow fadeInUp">
+                    <h2>Our service</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et <br> dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex</p>
                 </div>
-            </div>
-            <div class="col-sm-6 col-md-3 wow fadeInLeft" data-wow-delay="0.3s">
-                <div class="service">
-                    <div class="icon-box">
+                @foreach($services as $service)
+                    <div class="col-sm-6 col-md-3 wow fadeInLeft">
+                        <div class="service">
+                            <div class="icon-box">
                             	<span class="icon">
-                                    <i class="ion-speedometer"></i>
+                                    <i class="{{ $service->icon }}"></i>
                                 </span>
+                            </div>
+                            <div class="caption">
+                                <h3>{{ $service->name }}</h3>
+                                <p>{{ $service->text }}</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="caption">
-                        <h3>Speed Optimized</h3>
-                        <p>Lorem ipsum dolor sit amet, con-sectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
-                    </div>
-                </div>
+                @endforeach
             </div>
-            <div class="col-sm-6 col-md-3 wow fadeInLeft" data-wow-delay="0.6s">
-                <div class="service">
-                    <div class="icon-box">
-                            	<span class="icon">
-                                    <i class="ion-ios-infinite-outline"></i>
-                                </span>
-                    </div>
-                    <div class="caption">
-                        <h3>Tons of Feature</h3>
-                        <p>Lorem ipsum dolor sit amet, con-sectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-3 wow fadeInLeft" data-wow-delay="0.9s">
-                <div class="service">
-                    <div class="icon-box">
-                            	<span class="icon">
-                                    <i class="ion-ios-cloud-outline"></i>
-                                </span>
-                    </div>
-                    <div class="caption">
-                        <h3>Cloud Option</h3>
-                        <p>Lorem ipsum dolor sit amet, con-sectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div><!-- .container close -->
-</section><!-- #service close -->
+        </div><!-- .container close -->
+    </section><!-- #service close -->
+@endif
 
 <section id="call-to-action" class="section">
     <div class="container">
@@ -209,7 +176,8 @@ Contact start
 
             <div class="col-xs-12 col-sm-12 col-md-5 col-md-offset-1 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="form-group">
-                    <form action="#" method="post" id="contact-form">
+                    <form action="{{route('home')}}" method="post" id="contact-form">
+                        {{csrf_field()}}
                         <div class="input-field">
                             <input type="text" class="form-control" placeholder="Your Name" name="name">
                         </div>

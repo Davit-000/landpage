@@ -1,7 +1,9 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: FS04
- * Date: 4/4/2017
- * Time: 1:36 PM
- */
+@extends('layouts.site')
+
+@section('header')
+    @include('site.header')
+@endsection
+
+@section('content')
+    @include('site.content_page')
+@endsection
