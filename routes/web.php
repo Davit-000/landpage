@@ -35,7 +35,11 @@ Route::group(['middleware' => 'web'], function() {
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::get('/', function () {
+        if(view()->exists('admin.index')) {
+            $data = ['title' => 'Admin Panel'];
 
+            return view('admin.index', $data);
+        }
     });
     // Admin/pages
     Route::group(['prefix' => 'pages'], function() {
@@ -116,3 +120,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
         );
     });
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
